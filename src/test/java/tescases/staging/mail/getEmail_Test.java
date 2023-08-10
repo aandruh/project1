@@ -45,7 +45,7 @@ public class getEmail_Test extends BaseTest {
 
 //        Login_Page login_page  = new Login_Page();
 //        login_page.email_Input.setValue("alex+andersenwinery@bemakers.com");
-//        login_page.password_Input.setValue("Test1111");
+//        login_page.password_Input.setValue("1111");
 //        login_page.continue_Btn.hover().click();
 //        Orders_Page orders_page= new Orders_Page(Orders_Page.URL);
 //        orders_page.createNewOrder.hover().click();

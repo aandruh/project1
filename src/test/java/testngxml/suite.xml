@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="BM">
+    <suite-files>
+        <!--        <suite-file path="path/filename.xml"/>-->
+        <!--        <suite-file path="path/filename2.xml"/>-->
+    </suite-files>
+
+    <test name="app_Suite" preserve-order="true">
+        <classes>
+            <class name="tescases.staging.app.CreateOrderByMakerBusiness_ConfirmViaApp_Test"/>
+        </classes>
+    </test>
+
+</suite>

@@ -32,7 +32,7 @@ public class CreateOrderByMakerConfirmViaApp_Test extends BaseTest {
         order.setProductEditPageUrl("https://app.staging-bemakers.com/products/beverages/MTpQcm9kdWN0Ojk1MA/edit");
         order.setProductID("MTpQcm9kdWN0Ojk1MA");
         order.setMakerEmail("alex+dailydk@bemakers.com");
-        order.setMakerPassword("Test1111");
+        order.setMakerPassword("1111");
         order.setMakerToken(Query.getAuthToken(order.getMakerEmail(), order.getMakerPassword()));
         order.setCustomerAddress("Danish Business Adr\r\n" + "Kløvermarksvej 70D,\r\n" + "12\r\n" + "2300 Copenhagen\r\n" + "Denmark");
 

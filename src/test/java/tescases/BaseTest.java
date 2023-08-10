@@ -16,13 +16,17 @@ import static com.codeborne.selenide.Configuration.browser;
 import static com.codeborne.selenide.Selenide.close;
 import static pages.PageBase.waitForPageIsLoaded;
 import static utils.PropertiesLoader.uploadPropertiesFile;
-//import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class BaseTest {
     @BeforeSuite
     public void before_BaseTest_Suite() throws Exception {
         baseUrl = uploadPropertiesFile("config.properties").getProperty("baseUrl");
-
+        String os = System.getProperty("os.name");
+        System.out.println(os);
+        Configuration.headless = true;
+        WebDriverRunner.isHeadless();
+        System.out.println(WebDriverRunner.isHeadless());
     }
 
     @AfterMethod
