@@ -95,8 +95,8 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
         scrollDown();
         stripe_page.pay_Btn.hover().click();
         waitForPageIsLoaded();
-//        checkout_page.paymentSuccessfulTitle.shouldBe(visible);
-//        checkout_page.thanksForOrderingTitle.shouldBe(visible);
+        checkout_page.paymentSuccessfulTitle.shouldBe(visible);
+        checkout_page.thanksForOrderingTitle.shouldBe(visible);
         //get order number
         open("https://app.staging-bemakers.com/login");
 
