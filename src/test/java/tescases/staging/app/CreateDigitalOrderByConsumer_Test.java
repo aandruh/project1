@@ -93,7 +93,8 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
         stripe_page.billingNameInputField.setValue("Test");
         scrollDown();
         scrollDown();
-        stripe_page.pay_Btn.hover().click();
+//        stripe_page.pay_Btn.hover().click();
+        clickViaJs_01(stripe_page.pay_Btn);
         waitForPageIsLoaded();
         checkout_page.paymentSuccessfulTitle.shouldBe(visible);
         checkout_page.thanksForOrderingTitle.shouldBe(visible);
