@@ -96,9 +96,18 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
         stripe_page.billingNameInputField.setValue("Test");
         scrollDown();
         scrollDown();
-
+        sleep(2000);stripe_page.billingNameInputField.pressTab();
+        sleep(2000);stripe_page.billingNameInputField.pressTab();
+        sleep(2000);stripe_page.billingNameInputField.pressTab();
+        sleep(2000);stripe_page.billingNameInputField.pressTab();
+        sleep(2000);stripe_page.billingNameInputField.pressTab();
+        sleep(2000);stripe_page.billingNameInputField.pressTab();
+        sleep(2000);stripe_page.billingNameInputField.pressTab();
+        sleep(2000);stripe_page.billingNameInputField.pressEnter();
         sleep(2000);
-        stripe_page.pay_Btn.hover().click();
+
+//        stripe_page.pay_Btn.hover().click();
+
         waitForPageIsLoaded();
         checkout_page.paymentSuccessfulTitle.shouldBe(visible);
         checkout_page.thanksForOrderingTitle.shouldBe(visible);
