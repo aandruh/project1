@@ -124,10 +124,6 @@ public class CreateOrderByMakerBusiness_ConfirmViaApp_Test extends BaseTest {
         assertTrue(pdfExtractedContent.contains("Total (DKK): 12,50"));
 //        assertTrue(pdfExtractedContent.contains("Delivery to:\r\n" + "My BC company\r\n" +  order.getCustomerAddress()));
 
-        System.out.println("here");
-        System.out.println("Delivery to:\n" + "My BC company\n" +  order.getCustomerAddress());
-        System.out.println("here");
-        assertTrue(pdfExtractedContent.contains("Delivery to:\n" + "My BC company\n" +  order.getCustomerAddress()));
 
 
         assertEquals(orders_page.lastOrderNumber.getText(), order.getOrderNumber());
