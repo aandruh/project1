@@ -91,6 +91,8 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
         stripe_page.cardExpiryInputField.setValue("1224");
         stripe_page.cardCvcInputField.setValue("123");
         stripe_page.billingNameInputField.setValue("Test");
+        scrollDown();
+        scrollDown();
         stripe_page.pay_Btn.hover().click();
         waitForPageIsLoaded();
 //        checkout_page.paymentSuccessfulTitle.shouldBe(visible);
