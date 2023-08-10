@@ -122,7 +122,9 @@ public class CreateOrderByMakerBusiness_ConfirmViaApp_Test extends BaseTest {
         assertTrue(pdfExtractedContent.contains("Subtotal: 10,00"));
         softAssert.assertTrue(pdfExtractedContent.contains("25% VAT: 2,50"));
         assertTrue(pdfExtractedContent.contains("Total (DKK): 12,50"));
-        assertTrue(pdfExtractedContent.contains("Delivery to:\r\n" + "My BC company\r\n" +  order.getCustomerAddress()));
+//        assertTrue(pdfExtractedContent.contains("Delivery to:\r\n" + "My BC company\r\n" +  order.getCustomerAddress()));
+        assertTrue(pdfExtractedContent.contains("Delivery to:\n" + "My BC company\n" +  order.getCustomerAddress()));
+
 
         assertEquals(orders_page.lastOrderNumber.getText(), order.getOrderNumber());
         assertEquals(Integer.parseInt(Query.getQuantityAvailable(order.getMakerToken(), order.getProductID())), order.getProductQuantityAvailable() - 1);
