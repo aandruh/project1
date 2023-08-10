@@ -19,7 +19,7 @@ public class Stripe_Page extends PageBase {
     public SelenideElement cardExpiryInputField = $("input#cardExpiry");
     public SelenideElement cardCvcInputField = $("input#cardCvc");
     public SelenideElement billingNameInputField = $("input#billingName");
-    public SelenideElement pay_Btn = $(By.xpath("//button[@type='submit']"));
+    public SelenideElement pay_Btn = $(By.xpath("//button[@type='submit']/div[4]"));
 
 
 /*    public Checkout_Page(String url) {
