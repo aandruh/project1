@@ -7,7 +7,15 @@
 
     <test name="app_Suite" preserve-order="true">
         <classes>
+            <class name="tescases.staging.app.CreateClickAndCollectOrderByConsumer_Test"/>
+            <class name="tescases.staging.app.CreateDigitalOrderByConsumer_Test"/>
+            <class name="tescases.staging.app.CreateOrderByConsumer_Test"/>
             <class name="tescases.staging.app.CreateOrderByMakerBusiness_ConfirmViaApp_Test"/>
+            <class name="tescases.staging.app.CreateOrderByMakerBusiness_Test"/>
+            <class name="tescases.staging.app.CreateOrderByMakerConfirmViaApp_Test"/>
+            <class name="tescases.staging.app.CreateOrderByMakerConsumer_Test"/>
+            <class name="tescases.staging.app.CreateOrderByMakerDistributor_Test"/>
+            <class name="tescases.staging.app.CreateClickAndCollectOrderByConsumer_Test"/>
         </classes>
     </test>
 
