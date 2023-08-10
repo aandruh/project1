@@ -2,7 +2,9 @@ package tescases.staging.app;
 
 import Models.TestOrder_Model;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.app.Login_Page;
@@ -18,6 +20,7 @@ import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Configuration.browser;
 import static com.codeborne.selenide.Selenide.*;
 import static pages.PageBase.*;
 
@@ -93,6 +96,11 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
         stripe_page.billingNameInputField.setValue("Test");
         scrollDown();
         scrollDown();
+
+        sleep(2000);
+        System.out.println("suka zaebala");
+        System.out.println(WebDriverRunner.source());
+        System.out.println("suka zaebala");
 //        stripe_page.pay_Btn.hover().click();
         clickViaJs_01(stripe_page.pay_Btn);
         waitForPageIsLoaded();
