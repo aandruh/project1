@@ -26,7 +26,7 @@
                 <version>2.19.1</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${basedir}src/test/java/testngxml/suite.xml</suiteXmlFile>
+                        <suiteXmlFile>${basedir}/src/test/java/testngxml/suite.xml</suiteXmlFile>
 <!--                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
                     </suiteXmlFiles>
                     <properties>
