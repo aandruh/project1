@@ -16,8 +16,7 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Install Microsoft Edge and EdgeDriver
-           run:
-          choco install microsoft-edge
+           run: choco install microsoft-edge
                 choco install selenium-chromium-edge-driver
     - name: Set up JDK 1.8
       uses: actions/setup-java@v2
