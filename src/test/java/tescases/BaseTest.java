@@ -4,6 +4,7 @@ import Models.TestOrder_Model;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.NoSuchWindowException;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeSuite;
@@ -24,8 +25,11 @@ public class BaseTest {
         baseUrl = uploadPropertiesFile("config.properties").getProperty("baseUrl");
         String os = System.getProperty("os.name");
         System.out.println(os);
-        Configuration.headless = true;
+//        Configuration.headless = true;
         WebDriverRunner.isHeadless();
+//        System.setProperty("selenide.browser", "edge");
+        Configuration.browser = "edge";
+        WebDriverRunner.isFirefox();
         System.out.println(WebDriverRunner.isHeadless());
     }
 

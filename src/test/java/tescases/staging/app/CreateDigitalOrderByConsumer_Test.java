@@ -110,9 +110,9 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
 
         waitForPageIsLoaded();
         sleep(2000);
-        System.out.println("suka zaebala");
-        System.out.println(WebDriverRunner.source());
-        System.out.println("suka zaebala");
+//        System.out.println("suka zaebala");
+//        System.out.println(WebDriverRunner.source());
+//        System.out.println("suka zaebala");
         checkout_page.paymentSuccessfulTitle.shouldBe(visible);
         checkout_page.thanksForOrderingTitle.shouldBe(visible);
         //get order number
