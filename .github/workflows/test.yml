@@ -24,8 +24,6 @@ jobs:
     - name: instal firefox
       run: sudo apt install firefox
 
-    - name: instal edge
-      run: sudo apt install microsoft-edge-dev
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
