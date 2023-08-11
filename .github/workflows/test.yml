@@ -22,9 +22,6 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
 
-            - name: Print Edge version
-            run: (Get-Item (Get-Command msedge).Source).VersionInfo.ProductVersion
-            -
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
