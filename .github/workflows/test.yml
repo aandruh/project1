@@ -13,11 +13,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: browser-actions/setup-edge@v1
+        - name: Print Edge version
+          run: (Get-Item (Get-Command msedge).Source).VersionInfo.ProductVersion
+
     - uses: actions/checkout@v2
 
-    - name: Install Microsoft Edge and EdgeDriver
-           run: choco install microsoft-edge
-                choco install selenium-chromium-edge-driver
     - name: Set up JDK 1.8
       uses: actions/setup-java@v2
       with:
