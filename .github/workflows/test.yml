@@ -21,6 +21,12 @@ jobs:
         java-version: '8'
         distribution: 'adopt'
 
+          # Install Microsoft Edge and EdgeDriver
+          - name: Install Microsoft Edge and EdgeDriver
+            run: |
+              choco install microsoft-edge
+              choco install selenium-chromium-edge-driver
+
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
