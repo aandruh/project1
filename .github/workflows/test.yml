@@ -32,8 +32,8 @@ jobs:
       if: failure()
       uses: actions/upload-artifact@v2
       with:
-        name: screenshots
-        path: build/screenshots/*
+        name: *
+        path: /home/runner/work/project1/project1/build/reports/tests*
 
     - name: Test with Maven
       run: mvn test
