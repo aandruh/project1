@@ -27,6 +27,7 @@ public class BaseTest {
         System.out.println(os);
         Configuration.headless = true;
         WebDriverRunner.isHeadless();
+        System.setProperty("selenide.reportsFolder", "build/screenshots");
 //        System.setProperty("selenide.browser", "edge");
 //        System.setProperty("selenide.browser", "edge");
 //        Configuration.browser = "edge";
