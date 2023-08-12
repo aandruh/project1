@@ -136,7 +136,7 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
         $("#user_email").hover().click();
         $("#user_email").setValue("alex@bemakers.com");
         $(".mbm.login_next a").hover().click();
-        $("#user_password").setValue("password");
+        $("#user_password").setValue("Franklin6064");
         $("input[type='submit']").hover().click();
         open("https://mailtrap.io/inboxes/1565036/messages");
 
