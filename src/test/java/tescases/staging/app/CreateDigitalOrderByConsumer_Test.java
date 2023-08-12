@@ -95,6 +95,7 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
         stripe_page.cardExpiryInputField.setValue("1224");
         stripe_page.cardCvcInputField.setValue("123");
         stripe_page.billingNameInputField.setValue("Test");
+        if(stripe_page.billingZipCodeInputField.isDisplayed()){stripe_page.billingZipCodeInputField.setValue("40202");}
         scrollDown();
         scrollDown();
 //        sleep(2000);stripe_page.billingNameInputField.pressTab();
