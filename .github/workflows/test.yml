@@ -35,11 +35,11 @@ jobs:
         name: test
         path: /home/runner/work/project1/project1/build/reports/tests*
 
-          - name: Archive report
-              uses: actions/upload-artifact@v2
-              with:
-                name: emailable-report.html
-                path: target/surefire-reports/emailable-report.html
+    - name: Archive artifact
+      uses: actions/upload-artifact@v2
+       with:
+        name: emailable-report.html
+        path: target/surefire-reports/emailable-report.html
 
     - name: Test with Maven
       run: mvn test
