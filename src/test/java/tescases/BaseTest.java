@@ -29,7 +29,7 @@ public class BaseTest {
         WebDriverRunner.isHeadless();
 //        System.setProperty("selenide.browser", "edge");
 //        System.setProperty("selenide.browser", "edge");
-        Configuration.browser = "edge";
+//        Configuration.browser = "edge";
 //        System.setProperty("webdriver.edge.verboseLogging", "true");
         WebDriverRunner.isFirefox();
         System.out.println(WebDriverRunner.isHeadless());
