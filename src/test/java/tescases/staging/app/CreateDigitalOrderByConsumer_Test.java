@@ -109,7 +109,7 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
         sleep(2000);
 
         stripe_page.pay_Btn.hover().click();
-
+        sleep(20000);
 
 
 
