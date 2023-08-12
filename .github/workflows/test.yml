@@ -31,6 +31,12 @@ jobs:
     - name: Test with Maven
       run: mvn test
 
+    - name: Upload Screenshots
+             uses: actions/upload-artifact@v2
+             with:
+               name: screenshots
+               path: target/screenshots/
+
 # name: CI
 
 # # Controls when the workflow will run

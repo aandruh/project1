@@ -2,6 +2,7 @@ package tescases.staging.app;
 
 import Models.TestOrder_Model;
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -113,6 +114,7 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
 
         waitForPageIsLoaded();
         sleep(10000);
+        Selenide.screenshot("screenshotName");
         System.out.println( stripe_page.cardNumberInputField.getValue());
 
         System.out.println();
