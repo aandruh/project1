@@ -108,8 +108,15 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
 
         stripe_page.pay_Btn.hover().click();
 
+
+
+
         waitForPageIsLoaded();
         sleep(10000);
+        System.out.println();
+        System.out.println("is displayed ");
+        System.out.println(stripe_page.pay_Btn.hover().isDisplayed());
+        System.out.println();
 //        System.out.println("suka zaebala");
 //        System.out.println(WebDriverRunner.source());
 //        System.out.println("suka zaebala");
