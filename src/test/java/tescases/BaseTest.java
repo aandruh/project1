@@ -25,10 +25,11 @@ public class BaseTest {
         baseUrl = uploadPropertiesFile("config.properties").getProperty("baseUrl");
         String os = System.getProperty("os.name");
         System.out.println(os);
-//        Configuration.headless = true;
+        Configuration.headless = true;
         WebDriverRunner.isHeadless();
 //        System.setProperty("selenide.browser", "edge");
-        Configuration.browser = "firefox";
+//        System.setProperty("selenide.browser", "edge");
+        Configuration.browser = "edge";
 //        System.setProperty("webdriver.edge.verboseLogging", "true");
         WebDriverRunner.isFirefox();
         System.out.println(WebDriverRunner.isHeadless());
