@@ -113,6 +113,8 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
 
         waitForPageIsLoaded();
         sleep(10000);
+        System.out.println( stripe_page.cardNumberInputField.getValue());
+
         System.out.println();
         System.out.println("is displayed ");
         System.out.println(stripe_page.pay_Btn.hover().isDisplayed());
