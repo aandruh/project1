@@ -37,7 +37,7 @@ jobs:
 
     - name: Archive artifact
       uses: actions/upload-artifact@v2
-       with:
+      with:
         name: emailable-report.html
         path: target/surefire-reports/emailable-report.html
 
