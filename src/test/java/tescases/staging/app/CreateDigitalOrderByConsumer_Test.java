@@ -113,18 +113,7 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
 
 
 
-        waitForPageIsLoaded();
-        sleep(10000);
-        Selenide.screenshot("screenshotName");
-        System.out.println( stripe_page.cardNumberInputField.getValue());
 
-        System.out.println();
-        System.out.println("is displayed ");
-        System.out.println(stripe_page.pay_Btn.hover().isDisplayed());
-        System.out.println();
-//        System.out.println("suka zaebala");
-//        System.out.println(WebDriverRunner.source());
-//        System.out.println("suka zaebala");
         checkout_page.paymentSuccessfulTitle.shouldBe(visible);
         checkout_page.thanksForOrderingTitle.shouldBe(visible);
         //get order number
