@@ -54,7 +54,8 @@ public class BaseTest {
 //        System.out.println(driver.getCapabilities().getCapability("chrome").toString());
         String myos = System.getProperty("os.name");
         System.out.println("OS: "+ myos);
-        Configuration.headless = false;
+        Configuration.headless = true;
+        System.out.println("I am here");
         WebDriverRunner.isHeadless();
         System.setProperty("selenide.reportsFolder", "build/screenshots");
         WebDriverRunner.isFirefox();
