@@ -49,9 +49,9 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
 
         $(".collections a[href='/dk/collections/events']").hover().click();
         waitForPageIsLoaded();
-        scrollDown();
-        scrollDown();
-        sleep(3000);
+//        scrollDown();
+//        scrollDown();
+//        sleep(3000);
         $("a[href='/dk/collections/events/products/true-digital").hover().click();
         Product_Page product_page = new Product_Page();
         $("h1.h1").shouldHave(text("True digital"));
@@ -148,7 +148,7 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
         switchTo().frame($(".i6jjn6"));
         sleep(2000);
         scrollDown();
-        clickViaJs_01($("table.email-wrapper tbody tbody tbody a"));
+        clickViaJs_01($(By.xpath("//a[contains(text(),'Confirm order')]")));
         sleep(2000);
         PickingOrderList_Page pickingOrderList_page = new PickingOrderList_Page();
         switchTo().window("Bemakers");
