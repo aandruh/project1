@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           name: test
-          path: $HOME/screenshots/
+          path: target/surefire-reports/screenshots/
 
       - name: Archive artifact
         if: always() # Always execute this step, even if the previous step fails
