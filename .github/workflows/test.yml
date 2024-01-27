@@ -38,7 +38,7 @@ jobs:
         uses: actions/upload-artifact@v2.2.4
         with:
           name: screenshots
-          path: project1/build/reports/tests*
+          path: project1/target/surefire-reports/
 
       - name: Archive artifact
         if: always()
