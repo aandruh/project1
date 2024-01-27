@@ -3,9 +3,9 @@ name: Selenium TestNG Tests
 on:
   workflow_dispatch:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -48,8 +48,8 @@ jobs:
         if: always() # Always execute this step, even if the previous step fails
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: test
-          path: target/surefire-reports/screenshots/
+          name: screenshots
+          path: $HOME/screenshots/
 
       - name: Archive artifact
         if: always() # Always execute this step, even if the previous step fails
