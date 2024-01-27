@@ -25,7 +25,7 @@ public class BaseTest {
         baseUrl = uploadPropertiesFile("config.properties").getProperty("baseUrl");
         String os = System.getProperty("os.name");
         System.out.println(os);
-        Configuration.headless = true;
+//        Configuration.headless = true;
         WebDriverRunner.isHeadless();
         System.setProperty("selenide.reportsFolder", "build/screenshots");
 //        System.setProperty("selenide.browser", "edge");
