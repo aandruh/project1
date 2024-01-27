@@ -26,7 +26,7 @@ public class BaseTest {
     @BeforeSuite
     public void before_BaseTest_Suite() throws Exception {
         baseUrl = uploadPropertiesFile("config.properties").getProperty("baseUrl");
-        Configuration.browser = "firefox";
+        Configuration.browser = "edge";
         Configuration.browserSize = "1224x718";
 //        Configuration.browser = "chrome";
 //        String os = System.getProperty("os.name");
