@@ -27,7 +27,7 @@ public class BaseTest {
     public void before_BaseTest_Suite() throws Exception {
         baseUrl = uploadPropertiesFile("config.properties").getProperty("baseUrl");
         Configuration.browser = "firefox";
-        Configuration.startMaximized = true;
+        Configuration.browserSize = "1224x718";
 //        Configuration.browser = "chrome";
 //        String os = System.getProperty("os.name");
 //        System.out.println("OS NAME ///");
