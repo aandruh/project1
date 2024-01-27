@@ -3,9 +3,9 @@ name: Selenium TestNG Tests
 on:
   workflow_dispatch:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -31,29 +31,18 @@ jobs:
 
       - name: Test with Maven and Capture Results
         run: |
-          set +e
           mvn test
-          TEST_EXIT_CODE=$?
-          set -e
-
-          # Save screenshots if tests failed
-          if [ $TEST_EXIT_CODE -ne 0 ]; then
-            mkdir -p $HOME/screenshots
-            cp -R project1/build/reports/tests* $HOME/screenshots/
-          fi
-
-          exit $TEST_EXIT_CODE
 
       - name: Archive screenshots
-        if: always() # Always execute this step, even if the previous step fails
+        if: always()
         uses: actions/upload-artifact@v2.2.4
         with:
           name: screenshots
-          path: $HOME/screenshots/
+          path: project1/build/reports/tests*
 
       - name: Archive artifact
-        if: always() # Always execute this step, even if the previous step fails
+        if: always()
         uses: actions/upload-artifact@v2.2.4
         with:
-          name: emailable-report.html
+          name: emailable-report
           path: project1/target/surefire-reports/emailable-report.html
