@@ -49,6 +49,7 @@ public class CreateDigitalOrderByConsumer_Test extends BaseTest {
 
         $(".collections a[href='/dk/collections/events']").hover().click();
         waitForPageIsLoaded();
+        scrollDown();
         $("a[href='/dk/collections/events/products/true-digital").hover().click();
         Product_Page product_page = new Product_Page();
         $("h1.h1").shouldHave(text("True digital"));

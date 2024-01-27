@@ -15,8 +15,7 @@ import pages.app.Login_Page;
 
 
 import static com.codeborne.selenide.Browsers.FIREFOX;
-import static com.codeborne.selenide.Configuration.baseUrl;
-import static com.codeborne.selenide.Configuration.browser;
+import static com.codeborne.selenide.Configuration.*;
 import static com.codeborne.selenide.Selenide.close;
 import static com.codeborne.selenide.WebDriverRunner.isChrome;
 import static pages.PageBase.waitForPageIsLoaded;
@@ -28,7 +27,7 @@ public class BaseTest {
     public void before_BaseTest_Suite() throws Exception {
         baseUrl = uploadPropertiesFile("config.properties").getProperty("baseUrl");
         Configuration.browser = "firefox";
-        Configuration.browserSize = "1224x718";
+        Configuration.startMaximized = true;
 //        Configuration.browser = "chrome";
 //        String os = System.getProperty("os.name");
 //        System.out.println("OS NAME ///");
