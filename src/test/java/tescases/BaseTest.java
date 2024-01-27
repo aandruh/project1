@@ -15,6 +15,7 @@ import static com.codeborne.selenide.Browsers.FIREFOX;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Configuration.browser;
 import static com.codeborne.selenide.Selenide.close;
+import static com.codeborne.selenide.WebDriverRunner.isChrome;
 import static pages.PageBase.waitForPageIsLoaded;
 import static utils.PropertiesLoader.uploadPropertiesFile;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
@@ -23,17 +24,41 @@ public class BaseTest {
     @BeforeSuite
     public void before_BaseTest_Suite() throws Exception {
         baseUrl = uploadPropertiesFile("config.properties").getProperty("baseUrl");
+        Configuration.browser = "chrome";
         String os = System.getProperty("os.name");
+        System.out.println("OS NAME ///");
         System.out.println(os);
-        Configuration.headless = true;
+        System.out.println("///");
+        switch (os) {
+            case "Linux":
+                System.setProperty(
+                        "webdriver.chrome.driver",
+                        "src/main/resources/libs/webdrivers/chromedriver_linux");
+                break;
+
+            case "Windows 10":
+                System.setProperty(
+                        "webdriver.chrome.driver",
+                        "src/main/resources/libs/webdrivers/chromedriver119.exe");
+                break;
+            default:
+                throw new RuntimeException(
+
+                        "Operation System is not defined! Check System.getProperties(\"os.name\")"
+                );
+        }
+//        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions options = new ChromeOptions();
+//        ChromeDriver driver = new ChromeDriver(options);
+//        System.out.println(driver.getCapabilities().getCapability("chrome").toString());
+        String myos = System.getProperty("os.name");
+        System.out.println("OS: "+ myos);
+        Configuration.headless = false;
         WebDriverRunner.isHeadless();
         System.setProperty("selenide.reportsFolder", "build/screenshots");
-//        System.setProperty("selenide.browser", "edge");
-//        System.setProperty("selenide.browser", "edge");
-//        Configuration.browser = "edge";
-//        System.setProperty("webdriver.edge.verboseLogging", "true");
         WebDriverRunner.isFirefox();
-        System.out.println(WebDriverRunner.isHeadless());
+        System.out.println( "isHeadles: "+WebDriverRunner.isHeadless());
     }
 
     @AfterMethod
