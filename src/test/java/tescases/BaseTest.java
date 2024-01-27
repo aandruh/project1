@@ -3,7 +3,10 @@ package tescases;
 import Models.TestOrder_Model;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.WebDriverRunner;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.NoSuchWindowException;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -24,29 +27,30 @@ public class BaseTest {
     @BeforeSuite
     public void before_BaseTest_Suite() throws Exception {
         baseUrl = uploadPropertiesFile("config.properties").getProperty("baseUrl");
-        Configuration.browser = "chrome";
-        String os = System.getProperty("os.name");
-        System.out.println("OS NAME ///");
-        System.out.println(os);
-        System.out.println("///");
-        switch (os) {
-            case "Linux":
-                System.setProperty(
-                        "webdriver.chrome.driver",
-                        "src/main/resources/libs/webdrivers/chromedriver_linux");
-                break;
-
-            case "Windows 10":
-                System.setProperty(
-                        "webdriver.chrome.driver",
-                        "src/main/resources/libs/webdrivers/chromedriver119.exe");
-                break;
-            default:
-                throw new RuntimeException(
-
-                        "Operation System is not defined! Check System.getProperties(\"os.name\")"
-                );
-        }
+        Configuration.browser = "firefox";
+//        Configuration.browser = "chrome";
+//        String os = System.getProperty("os.name");
+//        System.out.println("OS NAME ///");
+//        System.out.println(os);
+//        System.out.println("///");
+//        switch (os) {
+//            case "Linux":
+//                System.setProperty(
+//                        "webdriver.chrome.driver",
+//                        "src/main/resources/libs/webdrivers/chromedriver_linux");
+//                break;
+//
+//            case "Windows 10":
+//                System.setProperty(
+//                        "webdriver.chrome.driver",
+//                        "src/main/resources/libs/webdrivers/chromedriver119.exe");
+//                break;
+//            default:
+//                throw new RuntimeException(
+//
+//                        "Operation System is not defined! Check System.getProperties(\"os.name\")"
+//                );
+//        }
 //        WebDriverManager.chromedriver().setup();
 //        WebDriverManager.chromedriver().setup();
 //        ChromeOptions options = new ChromeOptions();
